@@ -1,4 +1,4 @@
-# Descripció del projecte
+# Descripció dels directoris
 
 Cada carpeta, excepte `results`, conté el fitxer MiniZinc `.mzn`, que és el model corresponent, i una subcarpeta amb els arxius de dades per executar el model. A més, aquesta subcarpeta també conté un arxiu Python amb el qual s'han generat els jocs de prova de cada problema.
 
