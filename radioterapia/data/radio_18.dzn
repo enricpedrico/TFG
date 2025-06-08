@@ -1,0 +1,43 @@
+
+numDies = 20; % numero de dies
+m = 1; % num linacs
+s = 8; % num sessions per pacient
+p = 15; % num pacients
+tolerancia = 2; % diferencia maxima diaSesio i separacio
+solicitud = 9; % dies maxims fins primera visita
+
+disponible = [|  9,  3,  3,  7,  3, 20, 20, 12, 26, 17, 30, 33, 32, 20, 29, 49, 49, 49, 49, 49 |]; % capacitat de cada linac
+
+duracio = [| 2, 2, 2, 2, 2, 2, 2, 2
+            | 2, 2, 2, 2, 2, 2, 2, 2
+            | 2, 2, 2, 2, 2, 2, 2, 2
+            | 2, 2, 2, 2, 2, 3, 3, 3
+            | 2, 2, 2, 2, 2, 3, 3, 3
+            | 2, 2, 2, 2, 2, 3, 3, 3
+            | 3, 3, 3, 3, 3, 2, 2, 2
+            | 3, 3, 3, 3, 3, 2, 2, 2
+            | 3, 3, 3, 3, 3, 2, 2, 2
+            | 3, 3, 3, 3, 3, 2, 2, 2
+            | 3, 3, 3, 3, 3, 2, 2, 2
+            | 3, 3, 3, 3, 3, 2, 2, 2
+            | 3, 3, 3, 3, 3, 3, 3, 3
+            | 3, 3, 3, 3, 3, 3, 3, 3
+            | 3, 3, 3, 3, 3, 3, 3, 3 |]; % duracion de la sesion (2 o 3 instants de temps)(30 o 45 mins)
+
+separacio = [| 1, 2, 1, 2, 1, 2, 2
+              | 1, 2, 1, 2, 1, 2, 2
+              | 1, 2, 1, 2, 1, 2, 2
+              | 1, 2, 1, 2, 1, 2, 1
+              | 1, 2, 1, 2, 1, 2, 1
+              | 1, 2, 1, 2, 1, 2, 1
+              | 1, 2, 1, 2, 1, 2, 1
+              | 1, 2, 1, 2, 1, 2, 2
+              | 1, 2, 1, 2, 1, 2, 2
+              | 1, 2, 1, 2, 1, 2, 1
+              | 1, 2, 1, 2, 1, 2, 1
+              | 1, 2, 1, 2, 1, 2, 1
+              | 1, 2, 1, 2, 1, 2, 2
+              | 1, 2, 1, 2, 1, 2, 2
+              | 1, 2, 1, 2, 1, 2, 2 |]; % separacio ideal entre sesions 
+
+grup = [1, 1, 1, 2, 2, 2, 3, 4, 4, 5, 5, 5, 6, 6, 6]; % pacients amb mateix grup son identics
