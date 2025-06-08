@@ -1,0 +1,17 @@
+
+se = 40; % nombre de sessions
+gr = 20; % nombre de grups de treball
+cl = 7; % nombre de slots
+minPapersPerSlot = 3; % minim nombre d'articles per sessio i slot
+maxSesionsPar = 14; % maxim nombre de sessions paral·leles
+
+np = [14,23,12,9,9,6,10,4,10,7,6,5,3,5,6,4,3,12,7,16,4,5,14,11,4,3,10,6,6,4,13,3,4,9,5,4,11,6,6,8]; % nombre de papers acceptats a cada sessio
+
+npMax = [4, 6, 6, 4, 4, 5, 3]; % nombre maxim de papers per slot
+
+WG = [
+  {1}, {2}, {3}, {}, {}, {}, {6}, {7}, {7,8}, {10}, {8}, {8,11}, {5,8},
+  {3,8}, {7}, {13}, {13}, {14}, {}, {8}, {16}, {16}, {20}, {17}, {13}, 
+  {}, {9}, {11}, {11,12}, {9}, {6,19}, {}, {}, {18}, {10}, {5}, {16}, 
+  {4,5}, {8,12}, {7,15}
+]; % grups per sessio
